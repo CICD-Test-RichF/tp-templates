@@ -1,0 +1,7 @@
+name: secret-scan
+description: Secrets scan (composite)
+runs:
+  using: composite
+  steps:
+    - run: pip install detect-secrets && detect-secrets scan --all-files
+      shell: bash
